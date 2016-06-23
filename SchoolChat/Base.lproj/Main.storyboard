@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--About Me View Controller-->
+        <!--个人信息-->
         <scene sceneID="qZ4-eu-E1u">
             <objects>
                 <viewController id="bzz-28-83q" customClass="AboutMeViewController" customModule="SchoolChat" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,18 +16,8 @@
                     <view key="view" contentMode="scaleToFill" id="VaT-1s-gEs">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vq1-nL-oaf">
-                                <rect key="frame" x="91" y="160" width="207" height="131"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="signout:" destination="bzz-28-83q" eventType="touchUpInside" id="7m0-Vm-XPa"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7nH-hv-5QG"/>
+                    <navigationItem key="navigationItem" title="个人信息" id="7nH-hv-5QG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0b6-Ku-XfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,7 +60,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEq-Pf-cY9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1387" y="-1314"/>
+            <point key="canvasLocation" x="1427" y="-1370"/>
         </scene>
         <!--Session List View Controller-->
         <scene sceneID="664-Nf-vEF">

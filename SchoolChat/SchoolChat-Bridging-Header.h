@@ -5,4 +5,6 @@
 #import <NIMSDK/NIMSDK.h>
 #import <CommonCrypto/CommonCrypto.h>
 #import "NIMKit.h"
+#import <JSAnimatedImagesView/JSAnimatedImagesView.h>
+#import <MSWeakTimer/MSWeakTimer.h>
 

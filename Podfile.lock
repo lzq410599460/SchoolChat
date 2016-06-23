@@ -1,15 +1,21 @@
 PODS:
   - CryptoSwift (0.5)
+  - JSAnimatedImagesView (1.0.0):
+    - MSWeakTimer (~> 1.0)
+  - MSWeakTimer (1.1.0)
   - NIMSDK (2.4.0)
 
 DEPENDENCIES:
   - CryptoSwift
+  - JSAnimatedImagesView
   - NIMSDK
 
 SPEC CHECKSUMS:
   CryptoSwift: b89d89caad9e5bc417b054078635eeb22bcddf54
+  JSAnimatedImagesView: d5c5f561280171ce13f1f08ba9834c47a1f27bfc
+  MSWeakTimer: 9426150f933b80ed3acf3f6d228e4b61f0e303c8
   NIMSDK: c0764281fd2f610319486ff2584db13059c39bb3
 
-PODFILE CHECKSUM: b831f679475b8024002ee7af1d1b8f552b7a61c3
+PODFILE CHECKSUM: 4e03716dcffc3598bbc7619eab95d81be4e34f39
 
 COCOAPODS: 1.0.1

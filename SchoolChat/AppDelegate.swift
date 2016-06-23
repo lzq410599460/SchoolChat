@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NIMSDK.sharedSDK().registerWithAppID("0f5a5ed59a0fa44ec27c07edf2b1a2da", cerName: "Test")
         
         let UserInfo = NSUserDefaults.standardUserDefaults()
-        if( UserInfo.stringForKey("account")! == "" ){
+        if( UserInfo.stringForKey("account") == nil || UserInfo.stringForKey("account")! == "" ){
             let LoginSB = UIStoryboard.init(name: "Login" ,bundle: nil)
             let LoginVC = LoginSB.instantiateViewControllerWithIdentifier("log") as! LoginViewController
             self.window?.rootViewController = LoginVC

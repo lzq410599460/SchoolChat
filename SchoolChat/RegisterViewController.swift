@@ -7,23 +7,110 @@
 //
 
 import UIKit
+import JSAnimatedImagesView
+import MSWeakTimer
+import Foundation
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,JSAnimatedImagesViewDataSource {
     
-    @IBOutlet weak var chatname: UITextField!
+    @IBAction func Fog(sender: AnyObject) {
+        let alertController = UIAlertController.init(title: nil, message: "确认邮件已发送至邮箱", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction.init(title: "确定", style: UIAlertActionStyle.Default, handler: nil))
+        dispatch_async(dispatch_get_main_queue(), {self.presentViewController(alertController, animated: true, completion: nil)})
+    }
+ 
     
-
-
+    @IBOutlet weak var BACK: JSAnimatedImagesView!
+    @IBOutlet weak var Reg: UIButton!
+ 
+    @IBOutlet weak var Login: UIButton!
+    @IBOutlet weak var Forgot: UIButton!
+    @IBOutlet weak var info: UITableView!
+    
   
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        BACK.dataSource = self
+        BACK.timePerImage = 10.0
+        
+        info.backgroundColor = UIColor.clearColor()
+        Forgot.backgroundColor = UIColor.clearColor()
+        Login.backgroundColor = UIColor.clearColor()
+        Reg.backgroundColor = UIColor.init(red: 80, green: 200, blue: 80, alpha: 0.6)
+        
+        Forgot.alpha = 0.6
+        Login.alpha = 0.6
+        
+        
+    }
     
+    
+    
+    
+    
+    
+    func animatedImagesNumberOfImages(animatedImagesView: JSAnimatedImagesView!) -> UInt {
+        return 2
+    }
+    
+    func animatedImagesView(animatedImagesView: JSAnimatedImagesView!, imageAtIndex index: UInt) -> UIImage! {
+        let image : UIImage
+        
+        switch index{
+        case 0:
+            image = UIImage.init(named: "55")!
+        default:
+            image = UIImage.init(named: "55-1")!
+        }
+        
+        return image
+    }
+    
+    
+    
+    
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Text") as! TextInputTableViewCell
+        cell.backgroundColor = UIColor.clearColor()
+        cell.TextField.delegate = self
+        
+        if(indexPath.row == 0)
+        {
+            cell.config("", prompt: "Username")
+        }
+        else if (indexPath.row == 1)
+        {
+            cell.config("", prompt: "Nickname")
+        }
+        else
+        {
+            cell.config("", prompt: "Password")
+        }
+        return cell
+    }
+
+   
+  
+    // 注册点击事件
     @IBAction func Regi(sender: AnyObject) {
         //1970标准时间戳
         let timeString = "\(NSDate().timeIntervalSince1970*1000)"
         
         //准备更新的信息
-        let username = self.ID.text!
-        let passward = self.password.text!
-        let Name = self.chatname.text!
+        let username = (info.cellForRowAtIndexPath(NSIndexPath.init(forRow: 0, inSection: 0)) as! TextInputTableViewCell).TextField.text!
+        let Name = (info.cellForRowAtIndexPath(NSIndexPath.init(forRow: 1, inSection: 0)) as! TextInputTableViewCell).TextField.text!
+        let passward = (info.cellForRowAtIndexPath(NSIndexPath.init(forRow: 2, inSection: 0)) as! TextInputTableViewCell).TextField.text!
         let user = "accid=\(username)&token=\(passward)&name=\(Name)"
         
         //标准http请求header
@@ -73,15 +160,8 @@ class RegisterViewController: UIViewController {
         task.resume()
         
     }
-    
-    
-    @IBOutlet weak var Regbutton: UIButton!
-    @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var ID: UITextField!
-    
- 
-    
-
+     
+     
     
     //哈西 sha1加密算法
     func calc (appsecret:String,num:String,cur:String) -> String
@@ -93,18 +173,6 @@ class RegisterViewController: UIViewController {
     
     
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 
     

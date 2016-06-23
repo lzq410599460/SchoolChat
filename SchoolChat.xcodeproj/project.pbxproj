@@ -123,6 +123,7 @@
 		784CA4771D150D59008AF5E5 /* UIView+NIMKitToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 784CA4071D150D58008AF5E5 /* UIView+NIMKitToast.m */; };
 		784CA4791D150D92008AF5E5 /* NIMKitResouce.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 784CA4781D150D92008AF5E5 /* NIMKitResouce.bundle */; };
 		784CA47B1D151240008AF5E5 /* SessionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784CA47A1D151240008AF5E5 /* SessionListViewController.swift */; };
+		784F43DF1D1A7344004C9E95 /* TextInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F43DE1D1A7344004C9E95 /* TextInputTableViewCell.swift */; };
 		784FEF741D17989F0013347D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784FEF731D17989F0013347D /* MobileCoreServices.framework */; };
 		784FEF761D17B24D0013347D /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784FEF751D17B24D0013347D /* FriendsListViewController.swift */; };
 		785C2E2B1D164B7300FBF513 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785C2E2A1D164B7300FBF513 /* DataProvider.swift */; };
@@ -383,6 +384,7 @@
 		784CA4071D150D58008AF5E5 /* UIView+NIMKitToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NIMKitToast.m"; sourceTree = "<group>"; };
 		784CA4781D150D92008AF5E5 /* NIMKitResouce.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitResouce.bundle; sourceTree = SOURCE_ROOT; };
 		784CA47A1D151240008AF5E5 /* SessionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionListViewController.swift; sourceTree = "<group>"; };
+		784F43DE1D1A7344004C9E95 /* TextInputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputTableViewCell.swift; sourceTree = "<group>"; };
 		784FEF731D17989F0013347D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		784FEF751D17B24D0013347D /* FriendsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListViewController.swift; sourceTree = "<group>"; };
 		785C2E2A1D164B7300FBF513 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
@@ -421,6 +423,16 @@
 				8500BB8DA199EF8CD9D42266 /* Pods-SchoolChat.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		7849C42E1D1BB67E00FD57F8 /* Login&Reg  */ = {
+			isa = PBXGroup;
+			children = (
+				78324F3D1D143C43005A7A94 /* RegisterViewController.swift */,
+				78C5034C1D126523005E28C9 /* LoginViewController.swift */,
+				78C5034A1D1263AF005E28C9 /* Login.storyboard */,
+			);
+			name = "Login&Reg ";
 			sourceTree = "<group>";
 		};
 		784CA2FA1D150D58008AF5E5 /* NIMKit */ = {
@@ -917,6 +929,24 @@
 			path = Toast;
 			sourceTree = "<group>";
 		};
+		784F43E21D1A75A3004C9E95 /* custom cell */ = {
+			isa = PBXGroup;
+			children = (
+				784F43DE1D1A7344004C9E95 /* TextInputTableViewCell.swift */,
+			);
+			name = "custom cell";
+			sourceTree = "<group>";
+		};
+		784F43E31D1A8313004C9E95 /* support file */ = {
+			isa = PBXGroup;
+			children = (
+				78ABEA2C1D115F980083954E /* SchoolChat-Bridging-Header.h */,
+				785C2E2C1D16A86400FBF513 /* MySessionConfig.swift */,
+				785C2E2A1D164B7300FBF513 /* DataProvider.swift */,
+			);
+			name = "support file";
+			sourceTree = "<group>";
+		};
 		78ABEA0A1D114E2B0083954E = {
 			isa = PBXGroup;
 			children = (
@@ -944,17 +974,14 @@
 				78ABEA181D114E2B0083954E /* ViewController.swift */,
 				78ABEA1D1D114E2B0083954E /* Assets.xcassets */,
 				78ABEA221D114E2B0083954E /* Info.plist */,
-				78ABEA2C1D115F980083954E /* SchoolChat-Bridging-Header.h */,
 				78ABEA1A1D114E2B0083954E /* Main.storyboard */,
-				78C5034A1D1263AF005E28C9 /* Login.storyboard */,
-				78C5034C1D126523005E28C9 /* LoginViewController.swift */,
 				780374C51D12E97A00FBD5A3 /* AboutMeViewController.swift */,
 				78F39C021D13BBCF008DF539 /* SessionViewController.swift */,
-				78324F3D1D143C43005A7A94 /* RegisterViewController.swift */,
 				784CA47A1D151240008AF5E5 /* SessionListViewController.swift */,
-				785C2E2A1D164B7300FBF513 /* DataProvider.swift */,
-				785C2E2C1D16A86400FBF513 /* MySessionConfig.swift */,
 				784FEF751D17B24D0013347D /* FriendsListViewController.swift */,
+				7849C42E1D1BB67E00FD57F8 /* Login&Reg  */,
+				784F43E31D1A8313004C9E95 /* support file */,
+				784F43E21D1A75A3004C9E95 /* custom cell */,
 			);
 			path = SchoolChat;
 			sourceTree = "<group>";
@@ -1178,6 +1205,7 @@
 				784FEF761D17B24D0013347D /* FriendsListViewController.swift in Sources */,
 				784CA4751D150D59008AF5E5 /* NIMIndefiniteAnimatedView.m in Sources */,
 				780374C61D12E97A00FBD5A3 /* AboutMeViewController.swift in Sources */,
+				784F43DF1D1A7344004C9E95 /* TextInputTableViewCell.swift in Sources */,
 				784CA40E1D150D58008AF5E5 /* NIMCommonTableData.m in Sources */,
 				784CA43B1D150D58008AF5E5 /* NIMMessageCellMaker.m in Sources */,
 				78324F3E1D143C43005A7A94 /* RegisterViewController.swift in Sources */,

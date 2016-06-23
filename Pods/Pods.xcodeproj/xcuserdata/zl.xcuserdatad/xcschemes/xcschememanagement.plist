@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JSAnimatedImagesView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MSWeakTimer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SchoolChat.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,7 +32,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5C17BB3047B5C6D0D7132A5E617F8188</key>
+		<key>3B3C7E043402AE31E32F07A28778BD32</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3E309A246BFCC3E56C7E0304DD0DC385</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5689DBC1D9E1890F3636819BE949D0EF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
