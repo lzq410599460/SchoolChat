@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--个人信息-->
@@ -16,8 +17,28 @@
                     <view key="view" contentMode="scaleToFill" id="VaT-1s-gEs">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="U2N-ed-s9u">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="bzz-28-83q" id="vxz-1i-Bib"/>
+                                    <outlet property="delegate" destination="bzz-28-83q" id="g57-vw-sSU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="U2N-ed-s9u" firstAttribute="top" secondItem="gTU-IQ-fLt" secondAttribute="bottom" id="9xT-tU-nli"/>
+                            <constraint firstItem="s5H-nF-M4u" firstAttribute="top" secondItem="U2N-ed-s9u" secondAttribute="bottom" id="NCc-lJ-q0A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="U2N-ed-s9u" secondAttribute="trailing" constant="-20" id="VBb-3j-c4l"/>
+                            <constraint firstItem="U2N-ed-s9u" firstAttribute="leading" secondItem="VaT-1s-gEs" secondAttribute="leadingMargin" constant="-20" id="XWY-3g-Z2f"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="个人信息" id="7nH-hv-5QG"/>
+                    <connections>
+                        <outlet property="info" destination="U2N-ed-s9u" id="v3I-wH-CYP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0b6-Ku-XfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
