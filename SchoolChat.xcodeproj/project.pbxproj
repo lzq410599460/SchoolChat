@@ -126,8 +126,11 @@
 		784F43DF1D1A7344004C9E95 /* TextInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F43DE1D1A7344004C9E95 /* TextInputTableViewCell.swift */; };
 		784FEF741D17989F0013347D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784FEF731D17989F0013347D /* MobileCoreServices.framework */; };
 		784FEF761D17B24D0013347D /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784FEF751D17B24D0013347D /* FriendsListViewController.swift */; };
+		785041811D1D0A6800F4C355 /* InfoTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785041801D1D0A6800F4C355 /* InfoTextViewController.swift */; };
 		785C2E2B1D164B7300FBF513 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785C2E2A1D164B7300FBF513 /* DataProvider.swift */; };
 		785C2E2D1D16A86400FBF513 /* MySessionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785C2E2C1D16A86400FBF513 /* MySessionConfig.swift */; };
+		7866FC811D1E4A43001089A6 /* AvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7866FC801D1E4A43001089A6 /* AvatarViewController.swift */; };
+		7866FC831D1E4E33001089A6 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7866FC821D1E4E33001089A6 /* GenderViewController.swift */; };
 		78ABEA171D114E2B0083954E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ABEA161D114E2B0083954E /* AppDelegate.swift */; };
 		78ABEA191D114E2B0083954E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ABEA181D114E2B0083954E /* ViewController.swift */; };
 		78ABEA1C1D114E2B0083954E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78ABEA1A1D114E2B0083954E /* Main.storyboard */; };
@@ -387,8 +390,11 @@
 		784F43DE1D1A7344004C9E95 /* TextInputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputTableViewCell.swift; sourceTree = "<group>"; };
 		784FEF731D17989F0013347D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		784FEF751D17B24D0013347D /* FriendsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListViewController.swift; sourceTree = "<group>"; };
+		785041801D1D0A6800F4C355 /* InfoTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTextViewController.swift; sourceTree = "<group>"; };
 		785C2E2A1D164B7300FBF513 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		785C2E2C1D16A86400FBF513 /* MySessionConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySessionConfig.swift; sourceTree = "<group>"; };
+		7866FC801D1E4A43001089A6 /* AvatarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarViewController.swift; sourceTree = "<group>"; };
+		7866FC821D1E4E33001089A6 /* GenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 		78ABEA131D114E2B0083954E /* SchoolChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78ABEA161D114E2B0083954E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78ABEA181D114E2B0083954E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -947,6 +953,17 @@
 			name = "support file";
 			sourceTree = "<group>";
 		};
+		7866FC841D1E6571001089A6 /* About Me */ = {
+			isa = PBXGroup;
+			children = (
+				785041801D1D0A6800F4C355 /* InfoTextViewController.swift */,
+				780374C51D12E97A00FBD5A3 /* AboutMeViewController.swift */,
+				7866FC801D1E4A43001089A6 /* AvatarViewController.swift */,
+				7866FC821D1E4E33001089A6 /* GenderViewController.swift */,
+			);
+			name = "About Me";
+			sourceTree = "<group>";
+		};
 		78ABEA0A1D114E2B0083954E = {
 			isa = PBXGroup;
 			children = (
@@ -975,10 +992,10 @@
 				78ABEA1D1D114E2B0083954E /* Assets.xcassets */,
 				78ABEA221D114E2B0083954E /* Info.plist */,
 				78ABEA1A1D114E2B0083954E /* Main.storyboard */,
-				780374C51D12E97A00FBD5A3 /* AboutMeViewController.swift */,
 				78F39C021D13BBCF008DF539 /* SessionViewController.swift */,
 				784CA47A1D151240008AF5E5 /* SessionListViewController.swift */,
 				784FEF751D17B24D0013347D /* FriendsListViewController.swift */,
+				7866FC841D1E6571001089A6 /* About Me */,
 				7849C42E1D1BB67E00FD57F8 /* Login&Reg  */,
 				784F43E31D1A8313004C9E95 /* support file */,
 				784F43E21D1A75A3004C9E95 /* custom cell */,
@@ -1139,6 +1156,7 @@
 				784CA4541D150D59008AF5E5 /* NIMUsrInfoData.m in Sources */,
 				784CA42F1D150D58008AF5E5 /* NIMAudioContentConfig.m in Sources */,
 				784CA4281D150D58008AF5E5 /* NIMInputTextView.m in Sources */,
+				785041811D1D0A6800F4C355 /* InfoTextViewController.swift in Sources */,
 				784CA4211D150D58008AF5E5 /* NIMInputAudioRecordIndicatorView.m in Sources */,
 				784CA41C1D150D58008AF5E5 /* NIMContactDataItem.m in Sources */,
 				784CA4511D150D59008AF5E5 /* NIMTeamCardOperationItem.m in Sources */,
@@ -1146,6 +1164,7 @@
 				784CA40A1D150D58008AF5E5 /* NSString+NIM.m in Sources */,
 				784CA4601D150D59008AF5E5 /* NIMTimePickerView.m in Sources */,
 				784CA4471D150D58008AF5E5 /* NIMSessionMessageContentView.m in Sources */,
+				7866FC831D1E4E33001089A6 /* GenderViewController.swift in Sources */,
 				784CA44C1D150D59008AF5E5 /* NIMSessionVideoContentView.m in Sources */,
 				784CA4551D150D59008AF5E5 /* NIMAdvancedTeamCardViewController.m in Sources */,
 				784CA42A1D150D58008AF5E5 /* NIMInputView.m in Sources */,
@@ -1179,6 +1198,7 @@
 				784CA4221D150D58008AF5E5 /* NIMInputEmoticonButton.m in Sources */,
 				784CA4291D150D58008AF5E5 /* NIMInputToolBar.m in Sources */,
 				784CA4651D150D59008AF5E5 /* NIMSpellingCenter.m in Sources */,
+				7866FC811D1E4A43001089A6 /* AvatarViewController.swift in Sources */,
 				784CA43E1D150D58008AF5E5 /* NIMSessionViewController.m in Sources */,
 				784CA43A1D150D58008AF5E5 /* NIMDefaultValueMaker.m in Sources */,
 				784CA42E1D150D58008AF5E5 /* NIMUIConfig.m in Sources */,

@@ -9,7 +9,7 @@
         <!--个人信息-->
         <scene sceneID="qZ4-eu-E1u">
             <objects>
-                <viewController id="bzz-28-83q" customClass="AboutMeViewController" customModule="SchoolChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Info" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bzz-28-83q" customClass="AboutMeViewController" customModule="SchoolChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gTU-IQ-fLt"/>
                         <viewControllerLayoutGuide type="bottom" id="s5H-nF-M4u"/>
@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="3019" y="-984"/>
         </scene>
-        <!--View Controller-->
+        <!--Friends List View Controller-->
         <scene sceneID="lHM-Bg-7mP">
             <objects>
-                <viewController id="5xN-zi-jFP" sceneMemberID="viewController">
+                <viewController id="5xN-zi-jFP" customClass="FriendsListViewController" customModule="SchoolChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iZ2-rm-yc1"/>
                         <viewControllerLayoutGuide type="bottom" id="LoI-CR-csz"/>

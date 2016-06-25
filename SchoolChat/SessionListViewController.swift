@@ -30,7 +30,6 @@ class SessionListViewController: NIMSessionListViewController{
 
         let SesVC = SessionViewController.init(session: recent.session)
         SesVC.title = recent.session?.sessionId
-        SesVC
         self.navigationController?.pushViewController(SesVC, animated: true)
         
     }

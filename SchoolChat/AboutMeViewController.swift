@@ -37,7 +37,9 @@ class AboutMeViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
     
 
- 
+    override func viewWillAppear(animated: Bool) {
+        info.reloadData()
+    }
     
     
     override func viewDidLoad() {
@@ -141,18 +143,32 @@ class AboutMeViewController: UIViewController,UITableViewDelegate,UITableViewDat
                 if (indexPath.row == 0)
                 {
                     cell.textLabel?.text = "Sign"
-                    cell.detailTextLabel?.text = ""
+                    if( user!.userInfo?.sign == nil)
+                    { cell.detailTextLabel?.text = ""}
+                    else
+                    {cell.detailTextLabel?.text = user!.userInfo?.sign}
                 }
                 else if(indexPath.row == 1)
                 {
-                    cell.textLabel?.text = "Email"
-                    cell.detailTextLabel?.text = ""
+                    
+                   
+                        cell.textLabel?.text = "Email"
+                        if( user!.userInfo?.email == nil)
+                        { cell.detailTextLabel?.text = ""}
+                        else
+                        {cell.detailTextLabel?.text = user!.userInfo?.email}
+                    
                 }
                 else
                 {
                     cell.textLabel?.text = "Gender"
-                    cell.detailTextLabel?.text = ""
-                
+                    print(user?.userInfo?.gender.rawValue)
+                        if(user!.userInfo?.gender.rawValue == 2 )
+                        {cell.detailTextLabel?.text = "女"}
+                        else if (user?.userInfo?.gender.rawValue == 1 )
+                        {cell.detailTextLabel?.text = "男"}
+                        else
+                        {cell.detailTextLabel?.text = "未知"}
                 }
             }
             
@@ -180,16 +196,72 @@ class AboutMeViewController: UIViewController,UITableViewDelegate,UITableViewDat
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let user = NIMSDK.sharedSDK().userManager.userInfo(NIMSDK.sharedSDK().loginManager.currentAccount())
         
-        if(indexPath.section == 1 && indexPath.row == 1)
-            {
-            let NicknameVC = UIViewController.init()
-            let textField = UITextField.init(frame: CGRectMake(0, 0, 200, 40))
-            let textView = UIView.init(frame: CGRectMake(0, 0, 200, 40))
-            textField.text = user?.userInfo?.nickName
-            NicknameVC.view.addSubview(textView)
-                
-                self.navigationController?.pushViewController(NicknameVC, animated: true)
+        switch (indexPath.section,indexPath.row) {
+        case (0,0):
+            let image :UIImage
+            if(user?.userInfo?.avatarUrl != nil)
+            {         image = UIImage.init(CIImage: CIImage.init(contentsOfURL: NSURL.init(string: (user?.userInfo?.avatarUrl)!)! )!)            }
+            else
+            {            image = UIImage(named: "avatar_user")!            }
+            
+            let imageVC = AvatarViewController.init()
+            imageVC.config(image)
+            self.navigationController?.pushViewController(imageVC, animated: true)
+            
+        case (1,1):
+            let nick : String
+            if( user!.userInfo?.nickName == nil)
+                { nick = (user?.userId)! }
+            else
+                {nick = (user!.userInfo?.nickName)!}
+            
+            let NicknameVC = InfoTextViewController.init()
+            NicknameVC.config("Nickname",contant: nick)
+            self.navigationController?.pushViewController(NicknameVC, animated: true)
+            
+        case (2,0):
+            let sign : String
+            if( user!.userInfo?.sign == nil)
+            { sign = "" }
+            else
+            {sign = (user!.userInfo?.sign)!}
+            
+            let SignVC = InfoTextViewController.init()
+            SignVC.config("Signature",contant: sign)
+            self.navigationController?.pushViewController(SignVC, animated: true)
+            
+        case (2,1):
+            let email : String
+            if( user!.userInfo?.email == nil)
+            { email = "" }
+            else
+            {email = (user!.userInfo?.email)!}
+            
+            let EmailVC = InfoTextViewController.init()
+            EmailVC.config("Email",contant: email)
+            self.navigationController?.pushViewController(EmailVC, animated: true)
+        
+        case (2,2):
+            let GenderVC = GenderViewController.init()
+            self.navigationController?.pushViewController(GenderVC, animated: true)
+            
+        case (3,0):
+            //清空用户账户信息
+            let CurrentAccount = NSUserDefaults.standardUserDefaults()
+            CurrentAccount.setObject("", forKey: "account")
+            CurrentAccount.setObject("", forKey: "pass")
+            
+            //返回登陆界面
+            let LoginSB = UIStoryboard.init(name: "Login", bundle: nil)
+            let LoginVC = LoginSB.instantiateViewControllerWithIdentifier("log") as! LoginViewController
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.window?.rootViewController = LoginVC
+        
+        default:
+            print("选择信息出错")
         }
+ 
+        
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
