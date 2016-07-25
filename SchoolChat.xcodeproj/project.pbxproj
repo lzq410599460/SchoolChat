@@ -127,10 +127,16 @@
 		784FEF741D17989F0013347D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784FEF731D17989F0013347D /* MobileCoreServices.framework */; };
 		784FEF761D17B24D0013347D /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784FEF751D17B24D0013347D /* FriendsListViewController.swift */; };
 		785041811D1D0A6800F4C355 /* InfoTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785041801D1D0A6800F4C355 /* InfoTextViewController.swift */; };
+		7855FBC71D1FB0F5009D4ABD /* SSASideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7855FBC61D1FB0F5009D4ABD /* SSASideMenu.swift */; };
+		7855FBCA1D1FB267009D4ABD /* ForumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7855FBC91D1FB267009D4ABD /* ForumViewController.swift */; };
+		7855FBCE1D1FB27D009D4ABD /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7855FBCD1D1FB27D009D4ABD /* LeftViewController.swift */; };
+		7855FBD21D20077D009D4ABD /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7855FBD11D20077D009D4ABD /* StudyViewController.swift */; };
+		785A18F91D224A4F00DB59D3 /* ThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785A18F81D224A4F00DB59D3 /* ThreadViewController.swift */; };
 		785C2E2B1D164B7300FBF513 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785C2E2A1D164B7300FBF513 /* DataProvider.swift */; };
 		785C2E2D1D16A86400FBF513 /* MySessionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785C2E2C1D16A86400FBF513 /* MySessionConfig.swift */; };
 		7866FC811D1E4A43001089A6 /* AvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7866FC801D1E4A43001089A6 /* AvatarViewController.swift */; };
 		7866FC831D1E4E33001089A6 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7866FC821D1E4E33001089A6 /* GenderViewController.swift */; };
+		786FA99F1D3D01B8008177D3 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FA99E1D3D01B8008177D3 /* TopicViewController.swift */; };
 		78ABEA171D114E2B0083954E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ABEA161D114E2B0083954E /* AppDelegate.swift */; };
 		78ABEA191D114E2B0083954E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ABEA181D114E2B0083954E /* ViewController.swift */; };
 		78ABEA1C1D114E2B0083954E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78ABEA1A1D114E2B0083954E /* Main.storyboard */; };
@@ -391,10 +397,16 @@
 		784FEF731D17989F0013347D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		784FEF751D17B24D0013347D /* FriendsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListViewController.swift; sourceTree = "<group>"; };
 		785041801D1D0A6800F4C355 /* InfoTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTextViewController.swift; sourceTree = "<group>"; };
+		7855FBC61D1FB0F5009D4ABD /* SSASideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SSASideMenu.swift; path = "../../../Downloads/SSASideMenu-master/SSASideMenu/SSASideMenu.swift"; sourceTree = "<group>"; };
+		7855FBC91D1FB267009D4ABD /* ForumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForumViewController.swift; sourceTree = "<group>"; };
+		7855FBCD1D1FB27D009D4ABD /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		7855FBD11D20077D009D4ABD /* StudyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
+		785A18F81D224A4F00DB59D3 /* ThreadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadViewController.swift; sourceTree = "<group>"; };
 		785C2E2A1D164B7300FBF513 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		785C2E2C1D16A86400FBF513 /* MySessionConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySessionConfig.swift; sourceTree = "<group>"; };
 		7866FC801D1E4A43001089A6 /* AvatarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarViewController.swift; sourceTree = "<group>"; };
 		7866FC821D1E4E33001089A6 /* GenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
+		786FA99E1D3D01B8008177D3 /* TopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
 		78ABEA131D114E2B0083954E /* SchoolChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78ABEA161D114E2B0083954E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78ABEA181D114E2B0083954E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -946,6 +958,7 @@
 		784F43E31D1A8313004C9E95 /* support file */ = {
 			isa = PBXGroup;
 			children = (
+				7855FBC61D1FB0F5009D4ABD /* SSASideMenu.swift */,
 				78ABEA2C1D115F980083954E /* SchoolChat-Bridging-Header.h */,
 				785C2E2C1D16A86400FBF513 /* MySessionConfig.swift */,
 				785C2E2A1D164B7300FBF513 /* DataProvider.swift */,
@@ -953,15 +966,35 @@
 			name = "support file";
 			sourceTree = "<group>";
 		};
+		7855FBC81D1FB239009D4ABD /* pushed Info */ = {
+			isa = PBXGroup;
+			children = (
+				7855FBC91D1FB267009D4ABD /* ForumViewController.swift */,
+				7855FBCD1D1FB27D009D4ABD /* LeftViewController.swift */,
+				7855FBD11D20077D009D4ABD /* StudyViewController.swift */,
+				785A18F81D224A4F00DB59D3 /* ThreadViewController.swift */,
+				786FA99E1D3D01B8008177D3 /* TopicViewController.swift */,
+			);
+			name = "pushed Info";
+			sourceTree = "<group>";
+		};
 		7866FC841D1E6571001089A6 /* About Me */ = {
 			isa = PBXGroup;
 			children = (
-				785041801D1D0A6800F4C355 /* InfoTextViewController.swift */,
 				780374C51D12E97A00FBD5A3 /* AboutMeViewController.swift */,
+				785041801D1D0A6800F4C355 /* InfoTextViewController.swift */,
 				7866FC801D1E4A43001089A6 /* AvatarViewController.swift */,
 				7866FC821D1E4E33001089A6 /* GenderViewController.swift */,
 			);
 			name = "About Me";
+			sourceTree = "<group>";
+		};
+		7866FC851D1EBC4E001089A6 /* FriendsList      To be continue */ = {
+			isa = PBXGroup;
+			children = (
+				784FEF751D17B24D0013347D /* FriendsListViewController.swift */,
+			);
+			name = "FriendsList      To be continue";
 			sourceTree = "<group>";
 		};
 		78ABEA0A1D114E2B0083954E = {
@@ -992,9 +1025,10 @@
 				78ABEA1D1D114E2B0083954E /* Assets.xcassets */,
 				78ABEA221D114E2B0083954E /* Info.plist */,
 				78ABEA1A1D114E2B0083954E /* Main.storyboard */,
+				7855FBC81D1FB239009D4ABD /* pushed Info */,
 				78F39C021D13BBCF008DF539 /* SessionViewController.swift */,
 				784CA47A1D151240008AF5E5 /* SessionListViewController.swift */,
-				784FEF751D17B24D0013347D /* FriendsListViewController.swift */,
+				7866FC851D1EBC4E001089A6 /* FriendsList      To be continue */,
 				7866FC841D1E6571001089A6 /* About Me */,
 				7849C42E1D1BB67E00FD57F8 /* Login&Reg  */,
 				784F43E31D1A8313004C9E95 /* support file */,
@@ -1048,6 +1082,11 @@
 					78ABEA121D114E2B0083954E = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = TYZJ3TN8LK;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1188,6 +1227,7 @@
 				784CA46D1D150D59008AF5E5 /* NIMWebImageDownloader.m in Sources */,
 				784CA40F1D150D58008AF5E5 /* NIMCommonTableDelegate.m in Sources */,
 				784CA4131D150D58008AF5E5 /* NIMAvatarImageView.m in Sources */,
+				7855FBCA1D1FB267009D4ABD /* ForumViewController.swift in Sources */,
 				784CA4391D150D58008AF5E5 /* NIMVideoContentConfig.m in Sources */,
 				784CA44B1D150D59008AF5E5 /* NIMSessionUnknowContentView.m in Sources */,
 				784CA4111D150D58008AF5E5 /* NIMKitSwitcherCell.m in Sources */,
@@ -1196,6 +1236,7 @@
 				784CA4121D150D58008AF5E5 /* NIMKit.m in Sources */,
 				784CA46B1D150D59008AF5E5 /* NIMWebImageCompat.m in Sources */,
 				784CA4221D150D58008AF5E5 /* NIMInputEmoticonButton.m in Sources */,
+				7855FBD21D20077D009D4ABD /* StudyViewController.swift in Sources */,
 				784CA4291D150D58008AF5E5 /* NIMInputToolBar.m in Sources */,
 				784CA4651D150D59008AF5E5 /* NIMSpellingCenter.m in Sources */,
 				7866FC811D1E4A43001089A6 /* AvatarViewController.swift in Sources */,
@@ -1208,6 +1249,7 @@
 				784CA46A1D150D59008AF5E5 /* NIMImageCache.m in Sources */,
 				784CA4501D150D59008AF5E5 /* NIMCardMemberItem.m in Sources */,
 				784CA4711D150D59008AF5E5 /* NSData+NIMImageContentType.m in Sources */,
+				7855FBCE1D1FB27D009D4ABD /* LeftViewController.swift in Sources */,
 				784CA4181D150D58008AF5E5 /* NIMPageView.m in Sources */,
 				784CA45D1D150D59008AF5E5 /* NIMTeamCardHeaderCell.m in Sources */,
 				784CA47B1D151240008AF5E5 /* SessionListViewController.swift in Sources */,
@@ -1232,11 +1274,13 @@
 				784CA4681D150D59008AF5E5 /* NIMAttributedLabelURL.m in Sources */,
 				784CA4141D150D58008AF5E5 /* NIMBadgeView.m in Sources */,
 				784CA4241D150D58008AF5E5 /* NIMInputEmoticonManager.m in Sources */,
+				786FA99F1D3D01B8008177D3 /* TopicViewController.swift in Sources */,
 				784CA4311D150D58008AF5E5 /* NIMCellLayoutDefaultConfig.m in Sources */,
 				784CA42C1D150D58008AF5E5 /* NIMMediaItem.m in Sources */,
 				784CA4451D150D58008AF5E5 /* NIMSessionImageContentView.m in Sources */,
 				785C2E2D1D16A86400FBF513 /* MySessionConfig.swift in Sources */,
 				784CA40C1D150D58008AF5E5 /* UITableView+NIMScrollToBottom.m in Sources */,
+				785A18F91D224A4F00DB59D3 /* ThreadViewController.swift in Sources */,
 				784CA4521D150D59008AF5E5 /* NIMTeamCardRowItem.m in Sources */,
 				784CA44F1D150D59008AF5E5 /* NIMSessionListCell.m in Sources */,
 				784CA4371D150D58008AF5E5 /* NIMTipContentConfig.m in Sources */,
@@ -1246,6 +1290,7 @@
 				784CA4431D150D58008AF5E5 /* NIMSessionAudioContentView.m in Sources */,
 				78ABEA171D114E2B0083954E /* AppDelegate.swift in Sources */,
 				784CA4571D150D59008AF5E5 /* NIMNormalTeamCardViewController.m in Sources */,
+				7855FBC71D1FB0F5009D4ABD /* SSASideMenu.swift in Sources */,
 				784CA46E1D150D59008AF5E5 /* NIMWebImageDownloaderOperation.m in Sources */,
 				784CA4261D150D58008AF5E5 /* NIMInputEmoticonTabView.m in Sources */,
 				784CA4761D150D59008AF5E5 /* NIMProgressHUD.m in Sources */,

@@ -7,4 +7,5 @@
 #import "NIMKit.h"
 #import <JSAnimatedImagesView/JSAnimatedImagesView.h>
 #import <MSWeakTimer/MSWeakTimer.h>
+#import <CKCircleMenuView/CKCircleMenuView.h>
 

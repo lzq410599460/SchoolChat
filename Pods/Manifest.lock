@@ -1,21 +1,27 @@
 PODS:
+  - CKCircleMenuView (0.1.6)
   - CryptoSwift (0.5)
   - JSAnimatedImagesView (1.0.0):
     - MSWeakTimer (~> 1.0)
+  - MBProgressHUD (0.9.2)
   - MSWeakTimer (1.1.0)
   - NIMSDK (2.4.0)
 
 DEPENDENCIES:
+  - CKCircleMenuView
   - CryptoSwift
   - JSAnimatedImagesView
+  - MBProgressHUD
   - NIMSDK
 
 SPEC CHECKSUMS:
+  CKCircleMenuView: c73335207c5b4f57f532c272c17aeb2adeb77106
   CryptoSwift: b89d89caad9e5bc417b054078635eeb22bcddf54
   JSAnimatedImagesView: d5c5f561280171ce13f1f08ba9834c47a1f27bfc
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MSWeakTimer: 9426150f933b80ed3acf3f6d228e4b61f0e303c8
   NIMSDK: c0764281fd2f610319486ff2584db13059c39bb3
 
-PODFILE CHECKSUM: 4e03716dcffc3598bbc7619eab95d81be4e34f39
+PODFILE CHECKSUM: 9d09bfe6269426f296a377c0f7c2ce416b91dbee
 
 COCOAPODS: 1.0.1

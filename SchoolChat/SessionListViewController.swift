@@ -15,7 +15,8 @@ class SessionListViewController: NIMSessionListViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.reload()
-        print(self.recentSessions.count)
+
+       
         
         // Do any additional setup after loading the view.
     }
@@ -33,14 +34,6 @@ class SessionListViewController: NIMSessionListViewController{
         self.navigationController?.pushViewController(SesVC, animated: true)
         
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -1,11 +1,11 @@
 EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/CryptoSwift" "$PODS_CONFIGURATION_BUILD_DIR/JSAnimatedImagesView" "$PODS_CONFIGURATION_BUILD_DIR/MSWeakTimer"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/CKCircleMenuView" "$PODS_CONFIGURATION_BUILD_DIR/CryptoSwift" "$PODS_CONFIGURATION_BUILD_DIR/JSAnimatedImagesView" "$PODS_CONFIGURATION_BUILD_DIR/MBProgressHUD" "$PODS_CONFIGURATION_BUILD_DIR/MSWeakTimer"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/NIMSDK"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
 LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/NIMSDK/SDK" $(inherited) "${PODS_ROOT}/NIMSDK/SDK/Libs"
-OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/CryptoSwift/CryptoSwift.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/JSAnimatedImagesView/JSAnimatedImagesView.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/MSWeakTimer/MSWeakTimer.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/NIMSDK"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"NIMSDK" -l"aacplus" -l"crypto" -l"event" -l"nio" -l"nts" -l"nvs" -l"openh264" -l"opus" -l"sqlite3.0" -l"ssl" -l"stdc++.6.0.9" -l"z" -framework "AVFoundation" -framework "AudioToolbox" -framework "CoreMedia" -framework "CoreTelephony" -framework "CryptoSwift" -framework "JSAnimatedImagesView" -framework "MSWeakTimer" -framework "SystemConfiguration" -framework "VideoToolbox"
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/CKCircleMenuView/CKCircleMenuView.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/CryptoSwift/CryptoSwift.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/JSAnimatedImagesView/JSAnimatedImagesView.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/MBProgressHUD/MBProgressHUD.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/MSWeakTimer/MSWeakTimer.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/NIMSDK"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"NIMSDK" -l"aacplus" -l"crypto" -l"event" -l"nio" -l"nts" -l"nvs" -l"openh264" -l"opus" -l"sqlite3.0" -l"ssl" -l"stdc++.6.0.9" -l"z" -framework "AVFoundation" -framework "AudioToolbox" -framework "CKCircleMenuView" -framework "CoreMedia" -framework "CoreTelephony" -framework "CryptoSwift" -framework "JSAnimatedImagesView" -framework "MBProgressHUD" -framework "MSWeakTimer" -framework "SystemConfiguration" -framework "VideoToolbox"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

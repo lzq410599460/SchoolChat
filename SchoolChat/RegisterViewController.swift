@@ -109,19 +109,19 @@ class RegisterViewController: UIViewController,UITableViewDataSource,UITableView
         
         //准备更新的信息
         let username = (info.cellForRowAtIndexPath(NSIndexPath.init(forRow: 0, inSection: 0)) as! TextInputTableViewCell).TextField.text!
-        let Name = (info.cellForRowAtIndexPath(NSIndexPath.init(forRow: 1, inSection: 0)) as! TextInputTableViewCell).TextField.text!
+        let Name     = (info.cellForRowAtIndexPath(NSIndexPath.init(forRow: 1, inSection: 0)) as! TextInputTableViewCell).TextField.text!
         let passward = (info.cellForRowAtIndexPath(NSIndexPath.init(forRow: 2, inSection: 0)) as! TextInputTableViewCell).TextField.text!
-        let user = "accid=\(username)&token=\(passward)&name=\(Name)"
+        let user     = "accid=\(username)&token=\(passward)&name=\(Name)"
         
         //标准http请求header
-        let request = NSMutableURLRequest(URL: NSURL(string: "https://api.netease.im/nimserver/user/create.action")!)
+        let request        = NSMutableURLRequest(URL: NSURL(string: "https://api.netease.im/nimserver/user/create.action")!)
         request.HTTPMethod = "POST"
+        
         request.addValue("0f5a5ed59a0fa44ec27c07edf2b1a2da", forHTTPHeaderField: "AppKey")
         request.addValue("182736458493", forHTTPHeaderField: "nonce")
         request.addValue(timeString, forHTTPHeaderField:"CurTime" )
         request.addValue(calc("c501c23f8d1a",num: "182736458493",cur: timeString), forHTTPHeaderField: "CheckSum" )
-        request.addValue("application/x-www-form-urlencoded;charset=utf-8", forHTTPHeaderField: "Content-Type")
-        
+        request.addValue("application/x-www-form-urlencoded;charset = utf-8", forHTTPHeaderField: "Content-Type")
         
         
         

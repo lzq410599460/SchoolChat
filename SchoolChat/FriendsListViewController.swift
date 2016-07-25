@@ -13,11 +13,13 @@ class FriendsListViewController: UIViewController,UITableViewDelegate,UITableVie
     var MyFriendArray : NSArray = []
     let FriendsList = UITableView.init()
     
+
+    
     override func viewDidLoad() {
         MyFriendArray = NIMSDK.sharedSDK().userManager.myFriends()!
         super.viewDidLoad()
-        print("123456")
         self.view.addSubview(FriendsList)
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
         
         FriendsList.delegate = self
         FriendsList.dataSource = self

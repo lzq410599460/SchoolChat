@@ -56,10 +56,18 @@ class LoginViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             AccountInfo.setObject(username, forKey: "account")
             AccountInfo.setObject(password, forKey : "pass")
             
-            //转换到MainTab界面
-           let MainSB = UIStoryboard.init(name: "Main", bundle: nil)
-           let MainVC = MainSB.instantiateViewControllerWithIdentifier("MainTab") as! UITabBarController
-            appdelegate.window?.rootViewController = MainVC
+            //转换到主info界面
+                
+                let ForumVC = ForumViewController.init()
+                ForumVC.config("Trading")
+                let sideMenu = SSASideMenu(contentViewController: UINavigationController(rootViewController: ForumVC), leftMenuViewController: LeftViewController())
+                sideMenu.backgroundImage = UIImage(named: "55")
+                sideMenu.configure(SSASideMenu.MenuViewEffect(fade: true, scale: true, scaleBackground: false))
+                sideMenu.configure(SSASideMenu.ContentViewEffect(alpha: 1.0, scale: 0.7))
+                sideMenu.configure(SSASideMenu.ContentViewShadow(enabled: true, color: UIColor.blackColor(), opacity: 0.6, radius: 6.0))
+                sideMenu.delegate = appdelegate
+
+            appdelegate.window?.rootViewController = sideMenu
             }
         }
         else{print("填入完整信息")}

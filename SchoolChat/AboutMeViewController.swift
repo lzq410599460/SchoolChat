@@ -12,33 +12,15 @@ class AboutMeViewController: UIViewController,UITableViewDelegate,UITableViewDat
     @IBOutlet weak var info: UITableView!
     
 
-    //退出按钮
-    
-    /*@IBAction func signout(sender: AnyObject) {
-        
-        //清空用户账户信息
-        let CurrentAccount = NSUserDefaults.standardUserDefaults()
-        CurrentAccount.setObject("", forKey: "account")
-        CurrentAccount.setObject("", forKey: "pass")
-        
-        
-        //返回登陆界面
-        let LoginSB = UIStoryboard.init(name: "Login", bundle: nil)
-        let LoginVC = LoginSB.instantiateViewControllerWithIdentifier("log") as! LoginViewController
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.window?.rootViewController = LoginVC
-        
-        
-    }*/
-    
-    
-    //@IBOutlet weak var MyTabView: UITableView!
     
 
-    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
 
     override func viewWillAppear(animated: Bool) {
         info.reloadData()
+        self.setNeedsStatusBarAppearanceUpdate()
     }
     
     
@@ -162,7 +144,7 @@ class AboutMeViewController: UIViewController,UITableViewDelegate,UITableViewDat
                 else
                 {
                     cell.textLabel?.text = "Gender"
-                    print(user?.userInfo?.gender.rawValue)
+                   
                         if(user!.userInfo?.gender.rawValue == 2 )
                         {cell.detailTextLabel?.text = "女"}
                         else if (user?.userInfo?.gender.rawValue == 1 )

@@ -7,5 +7,7 @@ target 'SchoolChat' do
 pod 'NIMSDK'
 pod 'CryptoSwift'
 pod 'JSAnimatedImagesView'
+pod 'CKCircleMenuView'
+pod 'MBProgressHUD'
 
 end

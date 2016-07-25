@@ -10,7 +10,7 @@ import UIKit
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,SSASideMenuDelegate {
 
     var window: UIWindow?
     
@@ -33,7 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        application.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
         
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil))
         NIMKit.sharedKit().provider = DataProvider()
         
         NIMSDK.sharedSDK().registerWithAppID("0f5a5ed59a0fa44ec27c07edf2b1a2da", cerName: "Test")
@@ -47,6 +50,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else{
             NIMSDK.sharedSDK().loginManager.autoLogin(UserInfo.stringForKey("account")!, token: UserInfo.stringForKey("pass")!)
             print("自动登录成功 : \(NIMSDK.sharedSDK().loginManager.currentAccount())")
+  
+            window = UIWindow(frame: UIScreen.mainScreen().bounds)
+            
+            let ForumVC = ForumViewController.init()
+            ForumVC.config("Trading")
+            let sideMenu = SSASideMenu(contentViewController: UINavigationController(rootViewController: ForumVC), leftMenuViewController: LeftViewController())
+            sideMenu.backgroundImage = UIImage(named: "55")
+            sideMenu.configure(SSASideMenu.MenuViewEffect(fade: true, scale: true, scaleBackground: false))
+            sideMenu.configure(SSASideMenu.ContentViewEffect(alpha: 1.0, scale: 0.7))
+            sideMenu.configure(SSASideMenu.ContentViewShadow(enabled: true, color: UIColor.blackColor(), opacity: 0.6, radius: 6.0))
+            sideMenu.delegate = self
+            
+            
+            
+            window?.rootViewController = sideMenu
+
             
         }
         
@@ -59,6 +78,65 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         // Override point for customization after application launch.
         return true
+    }
+    
+    func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+        print("fetch start")
+        //标准http请求header
+        let request = NSMutableURLRequest(URL: NSURL(string: "https://webapp4.asu.edu/catalog/classlist?k=70793&t=2167&e=all&hon=F")!)
+        
+        request.HTTPMethod = "GET"
+        request.setValue("application/x-www-form-urlencoded;charset=utf-8", forHTTPHeaderField: "Content-Type")
+        request.setValue("JSESSIONID=javaprod19~69FFA145AF2EC4F751A996796F5D7CDB.catalog19;onlineCampusSelection=C; __cfduid=de2e9529d1f8e26bddcf45cce0a13e9161467288177", forHTTPHeaderField: "Cookie")
+        request.HTTPShouldHandleCookies = true
+        
+        //消息返回
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
+            guard error == nil && data != nil else
+            {                                                          // check for fundamental networking error
+                print("error=\(error)")
+                return
+            }
+            
+            
+            if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200
+            {           // check for http errors
+                print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                print("response = \(response)")
+            }
+            
+            //http返回字符串
+            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            
+            
+            
+            
+            //计算座位字符串
+            
+            let start = "<td style=\"text-align:right;padding:0px;width:22px; border:none\">"
+            let startR = responseString!.rangeOfString(start)
+            
+            let end = "<td style=\"text-align:center;padding-left:3px;padding-right:3px; padding-top: 0px;border:none\">of</td>"
+            let endR = responseString!.rangeOfString(end)
+            
+            let result = responseString!.substringWithRange(NSMakeRange(startR.location + 65 , endR.location-startR.location-81 ))
+            
+            UIApplication.sharedApplication().cancelAllLocalNotifications()
+            let not = UILocalNotification.init()
+            let now = NSDate()
+            
+            not.fireDate = now
+            not.alertBody = "CSE310 还有" + result + "个座位啦！"
+            not.soundName = UILocalNotificationDefaultSoundName
+            
+            UIApplication.sharedApplication().scheduleLocalNotification(not)
+            completionHandler(UIBackgroundFetchResult.NewData)
+            print("fetch end")
+            
+        }
+        
+        task.resume()
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -82,6 +160,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    
 
 
 }
